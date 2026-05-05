@@ -12,7 +12,7 @@ export default function Company() {
   return (
     <section id="company" className="py-40 px-6">
       <div className="max-w-5xl mx-auto">
-        <p className="text-sm font-medium tracking-widest text-white/50 uppercase mb-6">
+        <p className="text-2xl font-medium tracking-widest text-white/50 uppercase mb-6">
           Company
         </p>
         <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-24">
@@ -35,22 +35,30 @@ export default function Company() {
         </div>
 
         {/* 代表プロフィール */}
-        <p className="text-sm font-medium tracking-widest text-white/50 uppercase mb-12">
+        <p className="text-2xl font-medium tracking-widest text-white/50 uppercase mb-12">
           代表プロフィール
         </p>
-        <div className="max-w-2xl">
-          <p className="text-xl font-semibold mb-1">尾﨑 将也</p>
-          <p className="text-sm text-white/50 mb-8">代表 / Comp Systems</p>
-          <div className="space-y-5 text-white/65 font-light leading-relaxed text-sm">
-            <p>
-              前職では3年間、年商3〜100億円規模の中堅・中小企業を対象に、新規顧客開拓・経営課題の分析・ソリューション提案・プロジェクト伴走を一気通貫で担当。
-            </p>
-            <p>
-              AI活用により自身の業務を効率化し、そのノウハウを300名超の事業部員に展開した経験を持つ。「売れる営業力」と「AIで仕組みを作る実装力」を兼ね備え、Comp Systemsを創業。
-            </p>
-            <p>
-              「やり切る」をブランドに、相談から定着まで一人が責任を持って担う支援スタイルを貫く。
-            </p>
+        <div className="flex gap-10 items-start max-w-4xl">
+          <div className="flex-none">
+            <img
+              src="/masaya-ozaki.jpg"
+              alt="尾﨑 将也"
+              className="w-48 object-cover object-top rounded-2xl"
+            />
+          </div>
+          <div className="flex-1">
+            <p className="text-xl font-semibold mb-1">尾﨑 将也</p>
+            <p className="text-sm text-white/50 mb-8">代表 / Comp Systems</p>
+            <div className="space-y-5 text-white/65 font-light leading-relaxed text-sm">
+              <p>
+                前職では中堅・中小企業を対象に、飛び込みやテレアポで新規開拓営業に従事。<br />
+                開拓のみならず、経営課題の分析・ソリューション提案・プロジェクト伴走を一気通貫で担当。
+              </p>
+              <p>
+                AI活用により自身の業務を効率化し、そのノウハウを300名超の事業部員に展開した経験を持つ。<br />
+                「売れる営業力」と「AIで仕組みを作る実装力」を兼ね備え、Comp Systemsを創業。
+              </p>
+            </div>
           </div>
         </div>
       </div>

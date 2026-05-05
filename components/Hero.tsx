@@ -6,10 +6,7 @@ export default function Hero() {
       </div>
 
       <div className="fade-up max-w-4xl mx-auto">
-        <p className="text-sm font-medium tracking-widest text-white/60 uppercase mb-8">
-          AI活用支援コンサルティング
-        </p>
-        <h1 className="text-4xl sm:text-7xl font-semibold tracking-tight leading-[1.05] mb-8">
+<h1 className="text-4xl sm:text-7xl font-semibold tracking-tight leading-[1.05] mb-8">
           AI前提の経営を。
         </h1>
         <p className="fade-up delay-1 text-xl sm:text-2xl text-white/70 font-light leading-relaxed max-w-2xl mx-auto mb-12">
@@ -20,16 +17,14 @@ export default function Hero() {
           経営者を支えられる人材は圧倒的に不足している。
           <br />
           <br />
-          Comp Systemsは、外部のAI人材として経営に入り込む。
+          Comp Systemsは、単なるAIコンサルティングではない。
           <br />
-          活用余地の洗い出しから定着まで、一気通貫で担う。
+          外部のAI人材として、AI活用余地の洗い出しから定着まで、
+          <br />
+          一気通貫で担うことで、経営革新を起こす。
         </p>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
-        <span className="text-xs tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
-      </div>
     </section>
   );
 }

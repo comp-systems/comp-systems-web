@@ -4,18 +4,24 @@ export default function Contact() {
   return (
     <section id="contact" className="py-40 px-6">
       <div className="max-w-3xl mx-auto text-center">
-        <FadeUp>
-          <p className="text-sm font-medium tracking-widest text-white/50 uppercase mb-6">
+        <FadeUp delay={0}>
+          <p className="text-2xl font-medium tracking-widest text-white/50 uppercase mb-6">
             Contact
           </p>
+        </FadeUp>
+        <FadeUp delay={0.15}>
           <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-6">
             まずはお気軽にご相談ください。
           </h2>
+        </FadeUp>
+        <FadeUp delay={0.3}>
           <p className="text-lg text-white/65 font-light mb-16 leading-relaxed">
             AI活用に関するご相談は無料です。
             <br />
             現状をお聞きして、何ができるかをお伝えします。
           </p>
+        </FadeUp>
+        <FadeUp delay={0.45}>
           <a
             href="https://calendly.com/masaya980819/30min"
             target="_blank"

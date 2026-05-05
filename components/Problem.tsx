@@ -4,7 +4,7 @@ const problems = [
   {
     num: "01",
     title: "AI人材が確保できない",
-    text: "AIを推進・実装まで担える人材は市場全体で不足している。採用しようにも、そもそも供給がない。",
+    text: "AIが飛躍的に進化する一方で、推進・実装まで担える人材は不足している。",
   },
   {
     num: "02",
@@ -13,8 +13,8 @@ const problems = [
   },
   {
     num: "03",
-    title: "頼んでも定着しない",
-    text: "外部に任せたが、現場に根付かず形だけで終わった。ツールだけ入れても、使われなければ意味がない。",
+    title: "定着しない",
+    text: "外部に任せたが、現場に根付かず形だけで終わった。ツールだけ入れても使われなかった。",
   },
 ];
 
@@ -22,19 +22,24 @@ export default function Problem() {
   return (
     <section className="py-40 px-6">
       <div className="max-w-5xl mx-auto">
-        <FadeUp>
-          <p className="text-sm font-medium tracking-widest text-white/50 uppercase mb-6">
+        <FadeUp delay={0}>
+          <p className="text-2xl font-medium tracking-widest text-white/50 uppercase mb-6">
             Problem
           </p>
+        </FadeUp>
+        <FadeUp delay={0.15}>
           <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-24">
-            AIは経営課題になった。
+            AI対応の遅れは経営リスク。
             <br />
-            でも、動ける人材がいない。
+            でも、社内に動ける人材がいない。
           </h2>
+        </FadeUp>
+        <FadeUp delay={0.3}>
+          <p className="text-xl text-white font-light mb-8">こんな事象は起こっていませんか？</p>
         </FadeUp>
         <div className="grid sm:grid-cols-3 gap-px bg-white/20 rounded-2xl overflow-hidden">
           {problems.map((p, i) => (
-            <FadeUp key={p.num} delay={i * 0.12}>
+            <FadeUp key={p.num} delay={0.4 + i * 0.12}>
               <div className="bg-[#0a0a0a] p-10 h-full">
                 <span className="block text-6xl font-semibold text-white/25 mb-6 leading-none">
                   {p.num}

@@ -7,6 +7,7 @@ export default function NavBar() {
         Comp Systems
       </Link>
       <div className="flex items-center gap-8">
+        <Link href="/" className="text-sm text-white hover:text-white/70 transition-colors hidden sm:block">HOME</Link>
 <Link href="/company" className="text-sm text-white hover:text-white/70 transition-colors">会社概要</Link>
         <Link href="/#contact" className="text-sm text-white hover:text-white/70 transition-colors">お問い合わせ</Link>
       </div>
