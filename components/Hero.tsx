@@ -9,7 +9,7 @@ export default function Hero() {
         <p className="text-sm font-medium tracking-widest text-white/60 uppercase mb-8">
           AI活用支援コンサルティング
         </p>
-        <h1 className="text-5xl sm:text-7xl font-semibold tracking-tight leading-[1.05] mb-8">
+        <h1 className="text-4xl sm:text-7xl font-semibold tracking-tight leading-[1.05] mb-8">
           AI前提の経営を。
         </h1>
         <p className="fade-up delay-1 text-xl sm:text-2xl text-white/70 font-light leading-relaxed max-w-2xl mx-auto mb-12">
