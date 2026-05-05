@@ -1,3 +1,5 @@
+import FadeUp from "./FadeUp";
+
 const reasons = [
   {
     title: "外部AI人材として、経営に入り込む",
@@ -17,20 +19,22 @@ export default function WhyUs() {
   return (
     <section className="py-40 px-6">
       <div className="max-w-5xl mx-auto">
-        <p className="text-sm font-medium tracking-widest text-white/50 uppercase mb-6">
-          Why Us
-        </p>
-        <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-24">
-          選ばれる理由。
-        </h2>
+        <FadeUp>
+          <p className="text-sm font-medium tracking-widest text-white/50 uppercase mb-6">
+            Why Us
+          </p>
+          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-24">
+            選ばれる理由。
+          </h2>
+        </FadeUp>
         <div className="grid sm:grid-cols-3 gap-12">
-          {reasons.map((r) => (
-            <div key={r.title}>
+          {reasons.map((r, i) => (
+            <FadeUp key={r.title} delay={i * 0.12}>
               <h3 className="text-lg font-semibold mb-4 leading-snug">{r.title}</h3>
               <p className="text-white/65 font-light leading-relaxed text-sm">
                 {r.desc}
               </p>
-            </div>
+            </FadeUp>
           ))}
         </div>
       </div>
