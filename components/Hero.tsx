@@ -13,11 +13,11 @@ export default function Hero() {
           AI前提の経営を。
         </h1>
         <p className="fade-up delay-1 text-xl sm:text-2xl text-white/70 font-light leading-relaxed max-w-2xl mx-auto mb-12">
-          AIを推進・実装できる人材は圧倒的に不足している。
+          今や全ての企業で必須ツールとなったAIだが、
           <br />
-          Comp Systemsは、外部のAI人材として経営に入り込む。
+          その活用余地を見出し、実装し、
           <br />
-          活用余地の洗い出しから定着まで、一気通貫で担う。
+          経営者を支えられる人材は圧倒的に不足している。
         </p>
         <div className="fade-up delay-3 flex flex-col sm:flex-row gap-4 justify-center">
           <a
