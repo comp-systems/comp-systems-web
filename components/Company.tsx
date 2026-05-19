@@ -1,10 +1,11 @@
 const info = [
   { label: "屋号", value: "Comp Systems" },
   { label: "代表者", value: "尾﨑 将也（Masaya Ozaki）" },
-  { label: "設立", value: "2026年5月" },
-  { label: "事業内容", value: "AI活用支援コンサルティング" },
-  { label: "対応エリア", value: "全国（オンライン）/ 大阪近郊は訪問対応可" },
-  { label: "お問い合わせ", value: "masaya980819@gmail.com" },
+  { label: "所在地", value: "〒530-0001 大阪府大阪市北区梅田1丁目1番3号 大阪駅前第3ビル11階2号室" },
+  { label: "開業日", value: "2026年4月" },
+  { label: "事業内容", value: "AI活用支援のコンサルティング" },
+  { label: "対応エリア", value: "全国（オンライン）" },
+  { label: "お問い合わせ", value: "info@compsystems.net" },
 ];
 
 
@@ -49,15 +50,53 @@ export default function Company() {
           <div className="flex-1">
             <p className="text-xl font-semibold mb-1">尾﨑 将也</p>
             <p className="text-sm text-white/50 mb-8">代表 / Comp Systems</p>
-            <div className="space-y-5 text-white/65 font-light leading-relaxed text-sm">
-              <p>
-                前職では中堅・中小企業を対象に、飛び込みやテレアポで新規開拓営業に従事。<br />
-                開拓のみならず、経営課題の分析・ソリューション提案・プロジェクト伴走を一気通貫で担当。
-              </p>
-              <p>
-                AI活用により自身の業務を効率化し、そのノウハウを300名超の事業部員に展開した経験を持つ。<br />
-                「売れる営業力」と「AIで仕組みを作る実装力」を兼ね備え、Comp Systemsを創業。
-              </p>
+            <div className="space-y-10">
+              <div className="relative pl-6 border-l border-white/15">
+                <div className="text-base font-semibold text-white mb-3">
+                  学生時代
+                </div>
+                <div className="text-sm text-white/65 font-light leading-relaxed space-y-4">
+                  <p>
+                    体育会ラクロス部で主将を務め、中四国代表にも選出。<br />
+                    チームスポーツの楽しさや組織運営の難しさを学ぶ。
+                  </p>
+                  <p>
+                    部活やインターンの経験から、営業職に興味を持ち、理系院生ながら文系就活。<br />
+                    120社にエントリーし、大手含む内定多数。
+                  </p>
+                  <p>
+                    BtoB × 高単価無形商材 × 完全新規の<br />
+                    最も難易度が高い営業ができると感じた会社に就職。
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative pl-6 border-l border-white/15">
+                <div className="text-base font-semibold text-white mb-3">
+                  会社員時代
+                </div>
+                <div className="text-sm text-white/65 font-light leading-relaxed space-y-4">
+                  <p>
+                    最も厳しい環境で力をつけるべく、仕事に没頭。<br />
+                    業務と研鑽で、平日は1日16時間以上PCに向かい続ける。
+                  </p>
+                  <p>
+                    数多くの挫折を経験しながら、同期上位10％の成績を残す。<br />
+                    中堅・中小企業に深く入り込み、経営課題を解決。
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative pl-6 border-l border-white/15">
+                <div className="text-base font-semibold text-white mb-3">
+                  Comp Systems 創業
+                </div>
+                <p className="text-sm text-white/65 font-light leading-relaxed">
+                  会社員として与えられた仕組みの中で、<br />
+                  顧客に全力で寄り添うことに限界を感じ、<br />
+                  自身の時間を顧客貢献に最大限使うために独立。
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@ export default function FadeUp({
       }
       onViewportEnter={() => setVisible(true)}
       onViewportLeave={() => setVisible(false)}
-      viewport={{ margin: "-60px" }}
+      viewport={{ margin: "150px" }}
     >
       {children}
     </motion.div>
