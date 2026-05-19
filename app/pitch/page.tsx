@@ -375,7 +375,7 @@ export default function Pitch() {
         </FadeUp>
         <FadeUp delay={0.7}>
           <a
-            href="https://calendly.com/masaya980819/30min"
+            href="https://calendly.com/masaya-compsystems/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-12 inline-flex items-center justify-center px-10 py-5 bg-black text-white text-lg font-semibold rounded-full hover:bg-black/80 transition-colors"

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function FloatingCTA() {
   return (
     <motion.a
-      href="https://calendly.com/masaya980819/30min"
+      href="https://calendly.com/masaya-compsystems/30min"
       target="_blank"
       rel="noopener noreferrer"
       initial={{ opacity: 0, y: 20 }}

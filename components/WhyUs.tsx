@@ -35,8 +35,8 @@ export default function WhyUs() {
                   </span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-semibold mb-4">{r.title}</h3>
-                  <p className="text-white/65 font-light leading-relaxed whitespace-pre-line">{r.desc}</p>
+                  <h3 className="text-4xl font-semibold mb-4">{r.title}</h3>
+                  <p className="text-xl text-white/65 font-light leading-relaxed whitespace-pre-line">{r.desc}</p>
                 </div>
               </div>
             </FadeUp>

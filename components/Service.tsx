@@ -47,10 +47,10 @@ export default function Service() {
                   </span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-semibold mb-4 whitespace-pre-line">
+                  <h3 className="text-4xl font-semibold mb-4 whitespace-pre-line">
                     {s.title}
                   </h3>
-                  <p className="text-white/65 font-light leading-relaxed">{s.desc}</p>
+                  <p className="text-xl text-white/65 font-light leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             </FadeUp>

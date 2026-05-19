@@ -14,7 +14,7 @@ const problems = [
   {
     num: "03",
     title: "定着しない",
-    text: "外部に任せたが、現場に根付かず形だけで終わった。ツールだけ入れても使われなかった。",
+    text: "外部に任せたが、現場に根付かず終わった。ツールだけ入れても使われなかった。",
   },
 ];
 
@@ -35,7 +35,7 @@ export default function Problem() {
           </h2>
         </FadeUp>
         <FadeUp delay={0.3}>
-          <p className="text-xl text-white font-light mb-8">こんな事象は起こっていませんか？</p>
+          <p className="text-3xl text-white font-light mb-8">こんな事象は起こっていませんか？</p>
         </FadeUp>
         <div className="grid sm:grid-cols-3 gap-px bg-white/20 rounded-2xl overflow-hidden">
           {problems.map((p, i) => (
@@ -44,8 +44,8 @@ export default function Problem() {
                 <span className="block text-6xl font-semibold text-white/25 mb-6 leading-none">
                   {p.num}
                 </span>
-                <h3 className="text-base font-semibold mb-3">{p.title}</h3>
-                <p className="text-sm text-white/65 leading-relaxed font-light">
+                <h3 className="text-3xl font-semibold mb-3">{p.title}</h3>
+                <p className="text-2xl text-white/65 leading-relaxed font-light">
                   {p.text}
                 </p>
               </div>
