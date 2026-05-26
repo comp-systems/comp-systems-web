@@ -17,17 +17,19 @@ export default function Hero() {
       </h1>
       <motion.p
         style={{ opacity, y }}
-        className="mt-12 text-3xl sm:text-4xl text-white/70 font-light leading-relaxed max-w-6xl mx-auto"
+        className="mt-12 text-xl sm:text-4xl text-white/70 font-light leading-relaxed max-w-6xl mx-auto"
       >
         今や全ての企業で必須ツールとなったAIだが、
-        <br />
+        <br className="hidden sm:inline" />
         活用できる人材は不足している。
-        <br />
-        <br />
+        <br className="hidden sm:inline" />
+        <br className="hidden sm:inline" />
+        <br className="sm:hidden" />
+        <br className="sm:hidden" />
         Comp Systemsは、単なるAIコンサルティングではない。
-        <br />
+        <br className="hidden sm:inline" />
         外部のAI人材として、AI活用余地の洗い出しから定着まで、
-        <br />
+        <br className="hidden sm:inline" />
         一気通貫で担うことで、経営革新を起こす。
       </motion.p>
     </section>

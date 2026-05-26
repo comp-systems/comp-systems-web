@@ -6,7 +6,7 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 
 export const metadata: Metadata = {
   title: "Comp Systems | AI活用支援コンサルティング",
-  description: "年商3〜100億円の中小企業向け。相談から実装・定着まで一気通貫で担うAI活用支援。",
+  description: "徹底的な伴走でAIを定着させ、経営革新を起こす。",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

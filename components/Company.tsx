@@ -49,7 +49,18 @@ export default function Company() {
           </div>
           <div className="flex-1">
             <p className="text-3xl font-semibold mb-1">尾﨑 将也</p>
-            <p className="text-xl text-white/50 mb-8">代表 / Comp Systems</p>
+            <p className="text-xl text-white/50 mb-4">代表 / Comp Systems</p>
+            <div className="flex items-start gap-4 mb-8 p-4 border border-white/10 rounded-xl w-fit">
+              <img src="/g-cert.svg" alt="JDLA Deep Learning for GENERAL" className="h-36 w-auto opacity-90 flex-none" />
+              <div>
+                <p className="text-sm font-medium text-white/90 leading-snug">JDLA Deep Learning for GENERAL 2026 #3</p>
+                <p className="text-sm text-white/45 font-light leading-relaxed mt-1">
+                  一般社団法人 日本ディープラーニング協会（JDLA）認定のAI資格。<br />
+                  AIの基礎理論から倫理・法規制・ビジネス活用まで、<br />
+                  体系的な知識を保有することを証明する。
+                </p>
+              </div>
+            </div>
             <div className="space-y-10">
               <div className="relative pl-6 border-l border-white/15">
                 <div className="text-2xl font-semibold text-white mb-3">
