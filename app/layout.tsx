@@ -13,20 +13,20 @@ export const metadata: Metadata = {
     default: "Comp Systems | AI活用支援コンサルティング",
     template: "%s | Comp Systems",
   },
-  description: "AI活用の余地の洗い出しから定着まで一気通貫。大阪の中小企業向けAI活用支援コンサルティング。外部のAI人材として経営革新を起こします。",
+  description: "AI活用の余地の洗い出しから定着まで一気通貫。中小企業向けAI活用支援コンサルティング。外部のAI人材として経営革新を起こします。",
   openGraph: {
     type: "website",
     siteName: "Comp Systems",
     locale: "ja_JP",
     url: "https://www.compsystems.net",
     title: "Comp Systems | AI活用支援コンサルティング",
-    description: "AI活用の余地の洗い出しから定着まで一気通貫。大阪の中小企業向けAI活用支援コンサルティング。",
+    description: "AI活用の余地の洗い出しから定着まで一気通貫。中小企業向けAI活用支援コンサルティング。",
     images: [{ url: "/masaya-ozaki.jpg", width: 1200, height: 630, alt: "Comp Systems" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Comp Systems | AI活用支援コンサルティング",
-    description: "AI活用の余地の洗い出しから定着まで一気通貫。大阪の中小企業向けAI活用支援コンサルティング。",
+    description: "AI活用の余地の洗い出しから定着まで一気通貫。中小企業向けAI活用支援コンサルティング。",
     images: ["/masaya-ozaki.jpg"],
   },
 };
