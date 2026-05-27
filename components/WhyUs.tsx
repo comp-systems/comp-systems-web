@@ -27,7 +27,7 @@ export default function WhyUs() {
         </FadeUp>
         <div className="space-y-px">
           {reasons.map((r, i) => (
-            <FadeUp key={r.title} delay={0.3 + i * 0.15}>
+            <FadeUp key={r.title} delay={0.3 + i * 0.15} margin="200px">
               <div className="flex flex-col sm:flex-row gap-8 sm:gap-16 py-12 border-t border-white/20">
                 <div className="flex-none w-24">
                   <span className="block text-4xl font-semibold text-white/20 leading-none">

@@ -36,7 +36,7 @@ export default function Service() {
         </FadeUp>
         <div className="space-y-px mt-24">
           {steps.map((s, i) => (
-            <FadeUp key={s.label} delay={0.3 + i * 0.15}>
+            <FadeUp key={s.label} delay={0.3 + i * 0.15} margin="200px">
               <div className="flex flex-col sm:flex-row gap-8 sm:gap-16 py-12 border-t border-white/20">
                 <div className="flex-none w-24">
                   <span className="text-xs font-medium tracking-widest text-white/50 uppercase">

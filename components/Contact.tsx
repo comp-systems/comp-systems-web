@@ -14,14 +14,12 @@ export default function Contact() {
             まずはお気軽にご相談ください。
           </h2>
         </FadeUp>
-        <FadeUp delay={0.3}>
+        <FadeUp delay={0.3} margin="200px">
           <p className="text-2xl text-white/65 font-light mb-16 leading-relaxed">
-            AI活用に関するご相談は無料です。
-            <br />
-            現状をお聞きして、何ができるかをお伝えします。
+            無料でAI活用余地を検証します。
           </p>
         </FadeUp>
-        <FadeUp delay={0.45}>
+        <FadeUp delay={0.45} margin="200px">
           <a
             href="https://calendly.com/masaya-compsystems/30min"
             target="_blank"

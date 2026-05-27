@@ -39,17 +39,20 @@ export default function Company() {
         <p className="text-2xl font-medium tracking-widest text-white/50 uppercase mb-12">
           代表プロフィール
         </p>
-        <div className="flex gap-10 items-start max-w-4xl">
-          <div className="flex-none">
+        <div className="max-w-4xl">
+          <div className="flex items-center gap-6 mb-10">
             <img
               src="/masaya-ozaki.jpg"
               alt="尾﨑 将也"
-              className="w-48 object-cover object-top rounded-2xl"
+              className="w-48 object-cover object-top rounded-2xl flex-none"
             />
+            <div>
+              <p className="text-3xl font-semibold mb-1">尾﨑 将也</p>
+              <p className="text-xl text-white/50">代表 / Comp Systems</p>
+            </div>
           </div>
-          <div className="flex-1">
-            <p className="text-3xl font-semibold mb-1">尾﨑 将也</p>
-            <p className="text-xl text-white/50 mb-4">代表 / Comp Systems</p>
+          <div>
+            <p className="text-lg font-medium text-white/50 mb-4">保有資格</p>
             <div className="flex items-start gap-4 mb-8 p-4 border border-white/10 rounded-xl w-fit">
               <img src="/g-cert.svg" alt="JDLA Deep Learning for GENERAL" className="h-36 w-auto opacity-90 flex-none" />
               <div>

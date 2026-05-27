@@ -34,12 +34,12 @@ export default function Problem() {
             でも、社内に動ける人材がいない。
           </h2>
         </FadeUp>
-        <FadeUp delay={0.3}>
+        <FadeUp delay={0.3} margin="200px">
           <p className="text-3xl text-white font-light mb-8">こんな事象は起こっていませんか？</p>
         </FadeUp>
         <div className="grid sm:grid-cols-3 gap-px bg-white/20 rounded-2xl overflow-hidden">
           {problems.map((p, i) => (
-            <FadeUp key={p.num} delay={0.4 + i * 0.12}>
+            <FadeUp key={p.num} delay={0.4 + i * 0.12} margin="200px">
               <div className="bg-[#0a0a0a] p-10 h-full">
                 <span className="block text-6xl font-semibold text-white/25 mb-6 leading-none">
                   {p.num}

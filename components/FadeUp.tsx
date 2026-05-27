@@ -6,10 +6,12 @@ export default function FadeUp({
   children,
   delay = 0,
   className,
+  margin = "-100px",
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
+  margin?: string;
 }) {
   const [visible, setVisible] = useState(false);
   const scrollDir = useRef<"down" | "up">("down");
@@ -36,7 +38,7 @@ export default function FadeUp({
       }
       onViewportEnter={() => setVisible(true)}
       onViewportLeave={() => setVisible(false)}
-      viewport={{ margin: "-100px" }}
+      viewport={{ margin }}
     >
       {children}
     </motion.div>
