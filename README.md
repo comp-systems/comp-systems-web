@@ -38,3 +38,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ---
 
 _Repository managed by Comp Systems (`comp-systems` GitHub organization)._
+
+_Auto-deploy reconnected via Vercel (2026-06)._
