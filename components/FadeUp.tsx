@@ -26,14 +26,14 @@ export default function FadeUp({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 70, scale: 0.97 }}
+      initial={{ opacity: 0, y: 24 }}
       animate={visible
-        ? { opacity: 1, y: 0, scale: 1 }
-        : { opacity: 0, y: 70, scale: 0.97 }
+        ? { opacity: 1, y: 0 }
+        : { opacity: 0, y: 24 }
       }
       transition={
         visible && scrollDir.current === "down"
-          ? { duration: 0.9, delay, ease: [0.16, 1, 0.3, 1] }
+          ? { duration: 0.55, delay, ease: [0.16, 1, 0.3, 1] }
           : { duration: 0 }
       }
       onViewportEnter={() => setVisible(true)}
