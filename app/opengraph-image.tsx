@@ -8,7 +8,7 @@ export const contentType = "image/png";
 
 export default function OGImage() {
   const fontData = fs.readFileSync(
-    path.join(process.cwd(), "public", "fonts", "Orbitron-Black.ttf")
+    path.join(process.cwd(), "public", "fonts", "Geist-SemiBold.ttf")
   );
 
   return new ImageResponse(
@@ -22,7 +22,7 @@ export default function OGImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          fontFamily: "'Orbitron', sans-serif",
+          fontFamily: "'Geist', sans-serif",
           position: "relative",
         }}
       >
@@ -48,15 +48,12 @@ export default function OGImage() {
         <div
           style={{
             fontSize: 88,
-            fontWeight: 900,
-            letterSpacing: "4px",
+            fontWeight: 600,
+            letterSpacing: "-2px",
             display: "flex",
             lineHeight: 1.3,
             marginBottom: 32,
-            transform: "skewX(-10deg)",
-            backgroundImage: "linear-gradient(180deg, #ffffff 0%, #aaaaaa 20%, #ffffff 40%, #555555 60%, #cccccc 80%, #444444 100%)",
-            backgroundClip: "text",
-            color: "transparent",
+            color: "#ffffff",
           }}
         >
           Comp Systems
@@ -66,11 +63,10 @@ export default function OGImage() {
         <div
           style={{
             fontSize: 16,
-            fontWeight: 900,
+            fontWeight: 600,
             letterSpacing: "10px",
-            color: "rgba(180,180,180,0.3)",
+            color: "rgba(180,180,180,0.5)",
             display: "flex",
-            transform: "skewX(-10deg)",
           }}
         >
           AI CONSULTING
@@ -80,7 +76,7 @@ export default function OGImage() {
     {
       ...size,
       fonts: [
-        { name: "Orbitron", data: fontData, weight: 900, style: "normal" },
+        { name: "Geist", data: fontData, weight: 600, style: "normal" },
       ],
     }
   );
