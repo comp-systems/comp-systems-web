@@ -35,9 +35,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Comp Systems",
+  legalName: "Comp Systems株式会社",
   description: "AI活用支援コンサルティング",
   url: "https://www.compsystems.net",
-  telephone: "080-6391-8299",
   email: "info@compsystems.net",
   founder: { "@type": "Person", name: "尾﨑将也" },
   address: {

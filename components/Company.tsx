@@ -1,8 +1,8 @@
 const info = [
-  { label: "屋号", value: "Comp Systems" },
-  { label: "代表者", value: "尾﨑 将也（Masaya Ozaki）" },
+  { label: "商号", value: "Comp Systems株式会社" },
+  { label: "代表者", value: "代表取締役　尾﨑 将也（Masaya Ozaki）" },
   { label: "所在地", value: "〒530-0001 大阪府大阪市北区梅田1丁目1番3号 大阪駅前第3ビル11階2号室" },
-  { label: "創業", value: "2026年4月" },
+  { label: "設立", value: "2026年" },
   { label: "事業内容", value: "AI活用支援のコンサルティング" },
   { label: "対応エリア", value: "全国（オンライン）" },
   { label: "お問い合わせ", value: "info@compsystems.net" },
@@ -48,7 +48,7 @@ export default function Company() {
             />
             <div>
               <p className="text-3xl font-semibold mb-1">尾﨑 将也</p>
-              <p className="text-xl text-white/50">代表 / Comp Systems</p>
+              <p className="text-xl text-white/50">代表取締役 / Comp Systems株式会社</p>
             </div>
           </div>
           <div>
