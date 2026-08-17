@@ -10,23 +10,23 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.compsystems.net"),
   title: {
-    default: "Comp Systems | AI活用支援コンサルティング",
+    default: "Comp Systems | AI活用支援・代行",
     template: "%s | Comp Systems",
   },
-  description: "AI活用の余地の洗い出しから定着まで一気通貫。中小企業向けAI活用支援コンサルティング。外部のAI人材として経営革新を起こします。",
+  description: "AI活用の余地の洗い出しから定着まで一気通貫。中小企業向けAI活用支援・代行。外部のAI人材として経営革新を起こします。",
   openGraph: {
     type: "website",
     siteName: "Comp Systems",
     locale: "ja_JP",
     url: "https://www.compsystems.net",
-    title: "Comp Systems | AI活用支援コンサルティング",
-    description: "AI活用の余地の洗い出しから定着まで一気通貫。中小企業向けAI活用支援コンサルティング。",
+    title: "Comp Systems | AI活用支援・代行",
+    description: "AI活用の余地の洗い出しから定着まで一気通貫。中小企業向けAI活用支援・代行。",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Comp Systems" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Comp Systems | AI活用支援コンサルティング",
-    description: "AI活用の余地の洗い出しから定着まで一気通貫。中小企業向けAI活用支援コンサルティング。",
+    title: "Comp Systems | AI活用支援・代行",
+    description: "AI活用の余地の洗い出しから定着まで一気通貫。中小企業向けAI活用支援・代行。",
     images: ["/masaya-ozaki.jpg"],
   },
 };
@@ -36,7 +36,7 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "Comp Systems",
   legalName: "Comp Systems株式会社",
-  description: "AI活用支援コンサルティング",
+  description: "AI活用支援・代行",
   url: "https://www.compsystems.net",
   email: "info@compsystems.net",
   founder: { "@type": "Person", name: "尾﨑将也" },
@@ -49,7 +49,7 @@ const jsonLd = {
     addressCountry: "JP",
   },
   areaServed: "JP",
-  serviceType: "AIコンサルティング",
+  serviceType: "AI活用支援・代行",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

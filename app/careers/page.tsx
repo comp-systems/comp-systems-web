@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "採用情報",
   description:
-    "Comp Systems株式会社の採用情報。AI活用支援コンサルティングを共に担う仲間を募集しています。",
+    "Comp Systems株式会社の採用情報。AI活用支援・代行を共に担う仲間を募集しています。",
   alternates: { canonical: "https://www.compsystems.net/careers" },
 };
 

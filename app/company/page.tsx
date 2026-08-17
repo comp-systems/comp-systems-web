@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "会社概要",
-  description: "Comp Systems 代表 尾﨑将也のプロフィール・会社情報。大阪梅田を拠点に、AI活用支援コンサルティングを提供。",
+  description: "Comp Systems 代表 尾﨑将也のプロフィール・会社情報。大阪梅田を拠点に、AI活用支援・代行を提供。",
   alternates: { canonical: "https://www.compsystems.net/company" },
 };
 
