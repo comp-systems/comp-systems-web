@@ -7,11 +7,11 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OGImage() {
-  // ロゴは確定マスターから書き出した透過PNG（白・ロックアップ縦組み 1600x898）。
+  // ロゴは確定マスターから書き出した透過PNG（カラー・ロックアップ縦組み 1600x898）。
   // LINE等は og:image を正方形にクロップして小カードに出すため、
   // 中央 630x630 の内側に収まる縦組みを使う（横組みだと両端が切れる）。
   const logo = await readFile(
-    join(process.cwd(), "public", "logo", "cs-lockup-vertical-white.png")
+    join(process.cwd(), "public", "logo", "cs-lockup-vertical-color.png")
   );
   const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
 
