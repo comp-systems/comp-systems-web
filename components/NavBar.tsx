@@ -44,6 +44,13 @@ export default function NavBar() {
               key={href}
               href={href}
               aria-current={active ? "page" : undefined}
+              onClick={(e) => {
+                // 今いるページと同じリンクを押した時は、遷移させず先頭へ戻す
+                if (active) {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0 });
+                }
+              }}
               className={`${active ? text.navActive : text.navInactive}${
                 narrowHidden ? " hidden sm:block" : ""
               }`}
