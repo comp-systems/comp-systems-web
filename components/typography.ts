@@ -56,4 +56,10 @@ export const text = {
 
   /** グローバルナビ：それ以外 */
   navInactive: "text-sm text-white/50 hover:text-white/85 transition-colors",
+
+  /** モバイルのポップアップメニュー：現在いるページ */
+  navSheetActive: "text-2xl font-light tracking-tight text-white",
+
+  /** モバイルのポップアップメニュー：それ以外 */
+  navSheetInactive: "text-2xl font-light tracking-tight text-white/50",
 } as const;
