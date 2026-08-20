@@ -56,16 +56,9 @@ export default function Company() {
         {/* 代表プロフィール */}
         <h2 className={`${text.h2} mb-16`}>代表プロフィール</h2>
         <div className="max-w-4xl">
-          <div className="flex items-center gap-6 mb-10">
-            <img
-              src="/masaya-ozaki.jpg"
-              alt="尾﨑 将也"
-              className="w-48 object-cover object-top rounded-2xl flex-none"
-            />
-            <div>
-              <p className={`${text.h3} mb-1`}>尾﨑 将也</p>
-              <p className={text.small}>代表取締役 / Comp Systems株式会社</p>
-            </div>
+          <div className="mb-10">
+            <p className={`${text.h3} mb-1`}>尾﨑 将也</p>
+            <p className={text.small}>代表取締役 / Comp Systems株式会社</p>
           </div>
           <div>
             <p className={`${text.eyebrow} mb-4`}>保有資格</p>

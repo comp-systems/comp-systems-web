@@ -37,7 +37,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Comp Systems | AI活用支援・代行",
     description: "AI活用の余地の洗い出しから定着まで一気通貫。中小企業向けAI活用支援・代行。",
-    images: ["/masaya-ozaki.jpg"],
   },
 };
 
