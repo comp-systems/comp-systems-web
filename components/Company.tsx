@@ -4,7 +4,7 @@ const info = [
   { label: "商号", value: "Comp Systems株式会社" },
   { label: "代表者", value: "代表取締役　尾﨑 将也（Masaya Ozaki）" },
   { label: "所在地", value: "〒530-0001 大阪府大阪市北区梅田1丁目1番3号 大阪駅前第3ビル11階2号室" },
-  { label: "設立", value: "2026年" },
+  { label: "設立", value: "2026年8月" },
   { label: "事業内容", value: "AI活用支援・代行" },
   { label: "対応エリア", value: "全国（オンライン）" },
   { label: "お問い合わせ", value: "info@compsystems.net" },
@@ -27,7 +27,7 @@ const career = [
     ],
   },
   {
-    title: "Comp Systems 創業",
+    title: "Comp Systems 設立",
     paragraphs: [
       "会社員として与えられた仕組みの中で、\n顧客に全力で寄り添うことに限界を感じ、\n自身の時間を顧客貢献に最大限使うために独立。",
     ],
