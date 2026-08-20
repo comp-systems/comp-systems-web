@@ -1,7 +1,22 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Lockup, SymbolMark } from "./Logo";
+import { text } from "./typography";
+
+// 現在地は「白 ＋ 下線」、それ以外は薄いグレーで示す。
+// お問い合わせはトップ内アンカーなのでページとしては扱わない。
+const links = [
+  { href: "/", label: "HOME", narrowHidden: true },
+  { href: "/service", label: "事業案内" },
+  { href: "/journal", label: "CS Times" },
+  { href: "/company", label: "会社概要" },
+  { href: "/careers", label: "採用情報" },
+];
 
 export default function NavBar() {
+  const pathname = usePathname();
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 bg-black/80 backdrop-blur-md border-b border-white/[0.06]">
       <Link href="/" aria-label="Comp Systems ホームへ" className="shrink-0 hover:opacity-80 transition-opacity">
@@ -10,10 +25,24 @@ export default function NavBar() {
         <Lockup className="hidden sm:block h-7 w-auto text-white" />
       </Link>
       <div className="flex items-center gap-8">
-        <Link href="/" className="text-sm text-white hover:text-white/70 transition-colors hidden sm:block">HOME</Link>
-        <Link href="/company" className="text-sm text-white hover:text-white/70 transition-colors">会社概要</Link>
-        <Link href="/careers" className="text-sm text-white hover:text-white/70 transition-colors">採用情報</Link>
-        <Link href="/#contact" className="text-sm text-white hover:text-white/70 transition-colors">お問い合わせ</Link>
+        {links.map(({ href, label, narrowHidden }) => {
+          const active = pathname === href || pathname.startsWith(`${href}/`);
+          return (
+            <Link
+              key={href}
+              href={href}
+              aria-current={active ? "page" : undefined}
+              className={`${active ? text.navActive : text.navInactive}${
+                narrowHidden ? " hidden sm:block" : ""
+              }`}
+            >
+              <span className={active ? "border-b border-white pb-1" : undefined}>
+                {label}
+              </span>
+            </Link>
+          );
+        })}
+        <Link href="/#contact" className={text.navInactive}>お問い合わせ</Link>
       </div>
     </nav>
   );

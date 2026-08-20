@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function CompanyPage() {
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="on-light min-h-screen bg-[color:var(--surface)]">
       <NavBar />
       <div className="pt-24">
         <Company />

@@ -1,37 +1,21 @@
-"use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { text } from "./typography";
 
+// 初回表示ではMISSIONのみが画面に入るようにする（本文はスクロール後のStatementへ）。
+// 固定はせず、ページと一緒にスクロールする。
+// 高さは 100vh + パネルのかぶせ量(2.5rem)。初回表示に白が出ないようにするため。
+// 文言の正本：.company/00_会社情報/01_MVV.md
 export default function Hero() {
-  const { scrollY } = useScroll();
-  const opacity = useTransform(scrollY, [0, 250], [0, 1]);
-  const y = useTransform(scrollY, [0, 250], [40, 0]);
-
   return (
-    <section className="relative min-h-screen flex flex-col items-center text-center px-6 pt-[35vh]">
+    <section className="relative min-h-[calc(100vh+2.5rem)] flex items-center justify-center text-center px-6">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-white opacity-[0.05] blur-3xl" />
       </div>
 
-      <h1 className="text-4xl sm:text-7xl font-semibold tracking-tight leading-[1.05]">
-        AI前提の経営を。
+      <h1 className={`${text.h1} relative z-10`}>
+        テクノロジーで余白を生み、
+        <br className="hidden sm:block" />
+        創造力を最大化する。
       </h1>
-      <motion.p
-        style={{ opacity, y }}
-        className="mt-12 text-xl sm:text-4xl text-white/70 font-light leading-relaxed max-w-6xl mx-auto"
-      >
-        今や全ての企業で必須ツールとなったAIだが、
-        <br className="hidden sm:inline" />
-        活用できる人材は不足している。
-        <br className="hidden sm:inline" />
-        <br className="hidden sm:inline" />
-        <br className="sm:hidden" />
-        <br className="sm:hidden" />
-        Comp Systemsは、単なるAIコンサルティングではない。
-        <br className="hidden sm:inline" />
-        外部のAI人材として、AI活用余地の洗い出しから定着まで、
-        <br className="hidden sm:inline" />
-        一気通貫で担うことで、経営革新を起こす。
-      </motion.p>
     </section>
   );
 }

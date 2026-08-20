@@ -4,21 +4,79 @@ html {
   scroll-behavior: smooth;
 }
 
+/*
+ * 配色トークン。既定は黒地（サイト全体の基調）。
+ * 白地にしたいブロックを .on-light で囲むと、その中だけ反転する。
+ * 色は必ずこの変数を経由すること（コンポーネントに白/黒を直接書かない）。
+ */
+:root {
+  --fg: #ffffff;
+  --fg-muted: rgba(255, 255, 255, 0.62);
+  --fg-subtle: rgba(255, 255, 255, 0.45);
+  --fg-faint: rgba(255, 255, 255, 0.2);
+  --rule: rgba(255, 255, 255, 0.2);
+  --rule-soft: rgba(255, 255, 255, 0.1);
+  --surface: #000000;
+  --surface-alt: rgba(255, 255, 255, 0.04);
+  --invert-bg: #ffffff;
+  --invert-fg: #000000;
+}
+
+.on-light {
+  --fg: #0a0a0a;
+  --fg-muted: rgba(10, 10, 10, 0.68);
+  --fg-subtle: rgba(10, 10, 10, 0.5);
+  --fg-faint: rgba(10, 10, 10, 0.22);
+  --rule: rgba(10, 10, 10, 0.14);
+  --rule-soft: rgba(10, 10, 10, 0.08);
+  --surface: #ffffff;
+  --surface-alt: rgba(10, 10, 10, 0.035);
+  --invert-bg: #0a0a0a;
+  --invert-fg: #ffffff;
+}
+
 body {
   background: #000;
-  color: #fff;
-  font-family: var(--font-geist), -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  color: var(--fg);
+  /* ラテン文字=Geist、日本語=Noto Sans JP。順序を入れ替えないこと。 */
+  font-family: var(--font-geist), var(--font-noto-sans-jp), -apple-system,
+    BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(32px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* CS Times 記事本文（Markdown から生成される要素） */
+.journal-body > * + * {
+  margin-top: 1.6em;
 }
-
-.fade-up {
-  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+.journal-body h2 {
+  margin-top: 2.4em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--fg);
 }
-
-.delay-1 { animation-delay: 0.15s; }
-.delay-2 { animation-delay: 0.3s; }
-.delay-3 { animation-delay: 0.45s; }
+.journal-body h3 {
+  margin-top: 2em;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+.journal-body a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.journal-body ul,
+.journal-body ol {
+  padding-left: 1.4em;
+  list-style: disc;
+}
+.journal-body ol {
+  list-style: decimal;
+}
+.journal-body li + li {
+  margin-top: 0.5em;
+}
+.journal-body blockquote {
+  padding-left: 1.2em;
+  border-left: 2px solid var(--rule);
+  color: var(--fg-subtle);
+}

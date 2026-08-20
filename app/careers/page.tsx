@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function CareersPage() {
   return (
-    <main className="bg-black text-white min-h-screen overflow-x-hidden">
+    <main className="on-light min-h-screen bg-[color:var(--surface)]">
       <NavBar />
       <div className="pt-24">
         <Careers />

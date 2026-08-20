@@ -1,4 +1,4 @@
-import FadeUp from "./FadeUp";
+import { text } from "./typography";
 
 const problems = [
   {
@@ -20,36 +20,18 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="py-40 px-6">
+    <section id="problem" className="py-40 px-6">
       <div className="max-w-5xl mx-auto">
-        <FadeUp delay={0}>
-          <p className="text-2xl font-medium tracking-widest text-white/50 uppercase mb-6">
-            Problem
-          </p>
-        </FadeUp>
-        <FadeUp delay={0.15}>
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-24">
-            AI対応の遅れは経営リスク。
-            <br />
-            でも、社内に動ける人材がいない。
-          </h2>
-        </FadeUp>
-        <FadeUp delay={0.3} margin="200px">
-          <p className="text-3xl text-white font-light mb-8">こんな事象は起こっていませんか？</p>
-        </FadeUp>
-        <div className="grid sm:grid-cols-3 gap-px bg-white/20 rounded-2xl overflow-hidden">
-          {problems.map((p, i) => (
-            <FadeUp key={p.num} delay={0.4 + i * 0.12} margin="200px">
-              <div className="bg-[#0a0a0a] p-10 h-full">
-                <span className="block text-6xl font-semibold text-white/25 mb-6 leading-none">
-                  {p.num}
-                </span>
-                <h3 className="text-3xl font-semibold mb-3">{p.title}</h3>
-                <p className="text-2xl text-white/65 leading-relaxed font-light">
-                  {p.text}
-                </p>
-              </div>
-            </FadeUp>
+        <h2 className={`${text.h2} mb-16`}>
+          こんな事象は、起こっていませんか。
+        </h2>
+        <div className="grid sm:grid-cols-3 gap-px bg-[color:var(--rule)] rounded-2xl overflow-hidden">
+          {problems.map((p) => (
+            <div key={p.num} className="bg-[color:var(--surface)] p-10 h-full">
+              <span className={`${text.num} block mb-6`}>{p.num}</span>
+              <h3 className={`${text.h3} mb-3`}>{p.title}</h3>
+              <p className={text.body}>{p.text}</p>
+            </div>
           ))}
         </div>
       </div>

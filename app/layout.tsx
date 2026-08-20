@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Noto_Sans_JP } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
 const GA_ID = "G-WKSEDW04H1";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
+
+// 日本語書体。Geistはラテン文字のみのため、指定しないと日本語がOS既定
+// （Mac=ヒラギノ / Win=游ゴシック）にフォールバックし、環境ごとに別物になる。
+// 日本語フォントは容量が大きいので preload は行わない（display: swap で後追い適用）。
+const notoSansJP = Noto_Sans_JP({
+  variable: "--font-noto-sans-jp",
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  preload: false,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.compsystems.net"),
@@ -54,7 +64,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja" className={geist.variable}>
+    <html lang="ja" className={`${geist.variable} ${notoSansJP.variable}`}>
       <body className="bg-black text-white antialiased">
         {GA_ID && (
           <>
