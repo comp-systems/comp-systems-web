@@ -6,15 +6,14 @@ import { Lockup } from "./Logo";
 import { text } from "./typography";
 
 // 現在地は「白 ＋ 下線」、それ以外は薄いグレーで示す。
-// お問い合わせはトップ内アンカーなのでページとしては扱わない。
 const links = [
   { href: "/", label: "HOME" },
   { href: "/service", label: "事業案内" },
   { href: "/journal", label: "CS Times" },
   { href: "/company", label: "会社概要" },
   { href: "/careers", label: "採用情報" },
+  { href: "/contact", label: "お問い合わせ" },
 ];
-const contact = { href: "/contact", label: "お問い合わせ" };
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -80,9 +79,6 @@ export default function NavBar() {
               </Link>
             );
           })}
-          <Link href={contact.href} className={text.navInactive}>
-            {contact.label}
-          </Link>
         </div>
 
         {/* md未満：三本線。押すとシートが開き、開いている間はXになる */}
@@ -123,7 +119,7 @@ export default function NavBar() {
         }`}
       >
         <div className="flex flex-col items-end gap-7 px-6 pt-32 text-right">
-          {[...links, contact].map(({ href, label }, i) => {
+          {links.map(({ href, label }, i) => {
             const active = isActive(href);
             return (
               <Link
