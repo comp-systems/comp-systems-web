@@ -7,8 +7,11 @@ import { text } from "./typography";
 export default function Hero() {
   return (
     <section className="relative min-h-[calc(100vh+2.5rem)] flex items-center justify-center text-center px-6">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-white opacity-[0.05] blur-3xl" />
+      {/* 背景：夜のオフィス街（モノクロ化済み）。中央と下端を黒に沈めて文字とパネルのかぶせを立たせる */}
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 bg-[url('/hero-city.webp')] bg-cover bg-[position:8%_center] opacity-80 sm:bg-center" />
+        <div className="absolute inset-0 hidden sm:block bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0)_60%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-black" />
       </div>
 
       <h1 className={`${text.h1} relative z-10`}>
