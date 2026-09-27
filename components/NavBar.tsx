@@ -14,7 +14,7 @@ const links = [
   { href: "/company", label: "会社概要" },
   { href: "/careers", label: "採用情報" },
 ];
-const contact = { href: "/#contact", label: "お問い合わせ" };
+const contact = { href: "/contact", label: "お問い合わせ" };
 
 export default function NavBar() {
   const pathname = usePathname();
