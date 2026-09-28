@@ -29,7 +29,6 @@ const inquiryOptions = [
   "サービス内容・料金について",
   "取材・講演・セミナーのご依頼",
   "協業・パートナーシップについて",
-  "採用について",
   "その他",
 ];
 
@@ -82,8 +81,17 @@ function ClearableRadios({ name, options, row }: { name: string; options: string
 }
 
 // 必須・複数選択のチェックボックス。1つも選ばれていなければ先頭の項目に吹き出しを出す
-function RequiredCheckboxes({ name, options }: { name: string; options: string[] }) {
-  const [selected, setSelected] = useState<string[]>([]);
+function RequiredCheckboxes({
+  name,
+  options,
+  selected,
+  setSelected,
+}: {
+  name: string;
+  options: string[];
+  selected: string[];
+  setSelected: React.Dispatch<React.SetStateAction<string[]>>;
+}) {
   const firstRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -115,6 +123,9 @@ function RequiredCheckboxes({ name, options }: { name: string; options: string[]
 
 export default function ContactForm() {
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [inquiries, setInquiries] = useState<string[]>([]);
+  // 「現在の状況（AIのご活用状況）」は無料検証を選んだときだけ出す（検証の下調べに使う情報のため）
+  const wantsReview = inquiries.includes(inquiryOptions[0]);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -183,23 +194,30 @@ export default function ContactForm() {
       <Group title="お問い合わせ内容">
         <div>
           <Label required>ご用件（複数選択可）</Label>
-          <RequiredCheckboxes name={entry.inquiry} options={inquiryOptions} />
-        </div>
-      </Group>
-
-      <Group title="現在の状況">
-        <div>
-          <Label>AIのご活用状況</Label>
-          <ClearableRadios name={entry.status} options={statusOptions} />
+          <RequiredCheckboxes name={entry.inquiry} options={inquiryOptions} selected={inquiries} setSelected={setInquiries} />
         </div>
         <label>
-          <Label>気になっていること・お困りごと</Label>
+          <Label>お問い合わせ内容</Label>
+          <span className={`${text.small} block mb-3`}>
+            検証をお選びいただいた方は、
+            <br />
+            AI活用に関して気になっていること・お困りごとなどご記入ください。
+          </span>
           <textarea name={entry.concern} rows={6} className={inputClass} />
         </label>
-        <div>
-          <Label>ご希望の連絡方法</Label>
-          <ClearableRadios name={entry.method} options={methodOptions} row />
-        </div>
+      </Group>
+
+      {wantsReview && (
+        <Group title="現在の状況">
+          <div>
+            <Label>AIのご活用状況</Label>
+            <ClearableRadios name={entry.status} options={statusOptions} />
+          </div>
+        </Group>
+      )}
+
+      <Group title="ご希望の連絡方法">
+        <ClearableRadios name={entry.method} options={methodOptions} row />
       </Group>
 
       {state === "error" && (
