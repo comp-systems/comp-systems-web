@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import NavBar from "@/components/NavBar";
 import { text } from "@/components/typography";
+import AIPower from "@/components/AIPower";
 import Problem from "@/components/Problem";
 import Service from "@/components/Service";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -29,9 +29,9 @@ export default function ServicePage() {
             </p>
           </div>
         </section>
+        <AIPower />
         <Problem />
         <Service />
-        <Contact />
       </div>
       <Footer />
     </main>
