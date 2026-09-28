@@ -19,6 +19,8 @@ export default function ContactPage() {
         <div className="max-w-5xl mx-auto">
           <h1 className={`${text.h2} mb-6`}>お問い合わせ</h1>
           <p className={`${text.body} mb-20`}>
+            AI活用余地の無料検証、その他お問い合わせは以下のフォームよりお願いいたします。
+            <br />
             担当より2営業日以内にご連絡いたします。
           </p>
           <ContactForm />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { text } from "./typography";
 
 // 送信先は Google フォーム「AI活用 無料相談のお申し込み｜Comp Systems株式会社」（会社アカウント所有）。
@@ -15,6 +15,7 @@ const entry = {
   title: "entry.1234653584",
   tel: "entry.66885563",
   email: "entry.759704897",
+  inquiry: "entry.615171376",
   status: "entry.1219285152",
   concern: "entry.1945431035",
   method: "entry.864418707",
@@ -22,6 +23,15 @@ const entry = {
 
 const statusOptions = ["まだ何もしていない", "個人で少し試している", "会社で一部使っている", "活用し、業務を効率化している"];
 const methodOptions = ["電話", "メール"];
+// お問い合わせ内容（複数選択・必須）。Google フォーム側の選択肢と文言を完全に一致させること（違うと送信が弾かれる）
+const inquiryOptions = [
+  "AI活用余地の無料検証の問い合わせ",
+  "サービス内容・料金について",
+  "取材・講演・セミナーのご依頼",
+  "協業・パートナーシップについて",
+  "採用について",
+  "その他",
+];
 
 const inputClass =
   "w-full px-4 py-3 bg-transparent border border-[color:var(--rule)] text-[color:var(--fg)] placeholder:text-[color:var(--fg-faint)] focus:outline-none focus:border-[color:var(--fg)] transition-colors";
@@ -68,6 +78,38 @@ function ClearableRadios({ name, options, row }: { name: string; options: string
         ))}
       </div>
     </>
+  );
+}
+
+// 必須・複数選択のチェックボックス。1つも選ばれていなければ先頭の項目に吹き出しを出す
+function RequiredCheckboxes({ name, options }: { name: string; options: string[] }) {
+  const [selected, setSelected] = useState<string[]>([]);
+  const firstRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    firstRef.current?.setCustomValidity(selected.length ? "" : "1つ以上選択してください");
+  }, [selected]);
+
+  const toggle = (o: string) =>
+    setSelected((cur) => (cur.includes(o) ? cur.filter((x) => x !== o) : [...cur, o]));
+
+  return (
+    <div className="flex flex-col gap-3 mt-3">
+      {options.map((o, i) => (
+        <label key={o} className="flex items-center gap-3 cursor-pointer">
+          <input
+            ref={i === 0 ? firstRef : undefined}
+            type="checkbox"
+            name={name}
+            value={o}
+            checked={selected.includes(o)}
+            onChange={() => toggle(o)}
+            className="accent-[color:var(--fg)]"
+          />
+          <span className={text.bodyNarrow}>{o}</span>
+        </label>
+      ))}
+    </div>
   );
 }
 
@@ -136,6 +178,13 @@ export default function ContactForm() {
           <Label>電話番号</Label>
           <input name={entry.tel} type="tel" className={inputClass} placeholder="06-1234-5678" autoComplete="tel" />
         </label>
+      </Group>
+
+      <Group title="お問い合わせ内容">
+        <div>
+          <Label required>ご用件（複数選択可）</Label>
+          <RequiredCheckboxes name={entry.inquiry} options={inquiryOptions} />
+        </div>
       </Group>
 
       <Group title="現在の状況">
