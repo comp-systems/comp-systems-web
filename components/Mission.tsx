@@ -6,7 +6,7 @@ export default function Mission() {
     <section id="mission" className="relative pt-16 pb-8 px-6">
       <div className="max-w-5xl mx-auto">
         <h2 className={`${text.h2} mb-6`}>Mission</h2>
-        <p className={text.lead}>
+        <p className={text.body}>
           テクノロジーで余白を生み、創造力を最大化する。
         </p>
       </div>

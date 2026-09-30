@@ -6,7 +6,7 @@ export default function Contact() {
     <section id="contact" className="py-40 px-6">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className={`${text.h2} mb-6`}>まずはお気軽にご相談ください。</h2>
-        <p className={`${text.lead} mb-16`}>無料でAI活用余地を検証します。</p>
+        <p className={`${text.body} mb-16`}>無料でAI活用余地を検証します。</p>
         <Link
           href="/contact"
           className={`${text.cta} inline-flex items-center justify-center px-8 py-4 bg-[color:var(--invert-bg)] text-[color:var(--invert-fg)] rounded-full hover:opacity-85 transition-colors`}

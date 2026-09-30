@@ -38,7 +38,7 @@ const inputClass =
 function Label({ children, required }: { children: React.ReactNode; required?: boolean }) {
   return (
     <span className="flex items-center gap-3 mb-2">
-      <span className={text.dtValue}>{children}</span>
+      <span className={text.body}>{children}</span>
       {required && (
         <span className="text-xs px-2 py-0.5 bg-[color:var(--invert-bg)] text-[color:var(--invert-fg)]">必須</span>
       )}
@@ -46,10 +46,10 @@ function Label({ children, required }: { children: React.ReactNode; required?: b
   );
 }
 
-function Group({ title, children }: { title: string; children: React.ReactNode }) {
+function Group({ title, children }: { title?: string; children: React.ReactNode }) {
   return (
     <fieldset className="mb-16">
-      <legend className={`${text.h3} mb-8`}>{title}</legend>
+      {title && <legend className={`${text.h3} mb-8`}>{title}</legend>}
       <div className="flex flex-col gap-8">{children}</div>
     </fieldset>
   );
@@ -72,7 +72,7 @@ function ClearableRadios({ name, options, row }: { name: string; options: string
               onClick={() => value === o && setValue("")}
               className="accent-[color:var(--fg)]"
             />
-            <span className={text.bodyNarrow}>{o}</span>
+            <span className={text.body}>{o}</span>
           </label>
         ))}
       </div>
@@ -114,7 +114,7 @@ function RequiredCheckboxes({
             onChange={() => toggle(o)}
             className="accent-[color:var(--fg)]"
           />
-          <span className={text.bodyNarrow}>{o}</span>
+          <span className={text.body}>{o}</span>
         </label>
       ))}
     </div>
@@ -155,7 +155,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="max-w-2xl">
-      <Group title="貴社について教えてください">
+      <Group>
         <div>
           <Label required>お名前</Label>
           <div className="grid grid-cols-2 gap-4">
@@ -171,8 +171,8 @@ export default function ContactForm() {
           </div>
         </div>
         <label>
-          <Label required>会社名</Label>
-          <input name={entry.company} required className={inputClass} placeholder="株式会社〇〇" autoComplete="organization" />
+          <Label>会社名</Label>
+          <input name={entry.company} className={inputClass} placeholder="株式会社〇〇" autoComplete="organization" />
         </label>
         <label>
           <Label>役職</Label>
@@ -198,7 +198,7 @@ export default function ContactForm() {
         </div>
         <label>
           <Label>お問い合わせ内容</Label>
-          <span className={`${text.small} block mb-3`}>
+          <span className={`${text.body} block mb-3`}>
             検証をお選びいただいた方は、
             <br />
             AI活用に関して気になっていること・お困りごとなどご記入ください。
@@ -221,7 +221,7 @@ export default function ContactForm() {
       </Group>
 
       {state === "error" && (
-        <p className={`${text.small} mb-6`}>
+        <p className={`${text.body} mb-6`}>
           送信できませんでした。通信環境をご確認のうえ、もう一度お試しいただくか、info@compsystems.net までメールでご連絡ください。
         </p>
       )}

@@ -33,8 +33,8 @@ export default async function JournalEntryPage({ params }: Params) {
       <article className="pt-40 pb-40 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-baseline gap-6 mb-6">
-            <span className={text.dtLabel}>{formatDate(entry.date)}</span>
-            <span className={text.small}>{entry.tag}</span>
+            <span className={text.body}>{formatDate(entry.date)}</span>
+            <span className={text.body}>{entry.tag}</span>
           </div>
           <h1 className={`${text.h2} mb-16`}>{entry.title}</h1>
           <div

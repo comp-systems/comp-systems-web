@@ -47,8 +47,8 @@ export default function Company() {
               key={item.label}
               className="flex flex-col sm:flex-row gap-2 sm:gap-12 py-3 border-t border-[color:var(--rule)]"
             >
-              <span className={`${text.dtLabel} flex-none w-32`}>{item.label}</span>
-              <span className={text.dtValue}>{item.value}</span>
+              <span className={`${text.body} flex-none w-32`}>{item.label}</span>
+              <span className={text.body}>{item.value}</span>
             </div>
           ))}
         </div>
@@ -58,10 +58,10 @@ export default function Company() {
         <div className="max-w-4xl">
           <div className="mb-10">
             <p className={`${text.h3} mb-1`}>尾﨑 将也</p>
-            <p className={text.small}>代表取締役 / Comp Systems株式会社</p>
+            <p className={text.body}>代表取締役 / Comp Systems株式会社</p>
           </div>
           <div>
-            <p className={`${text.eyebrow} mb-4`}>保有資格</p>
+            <p className={`${text.body} mb-4`}>保有資格</p>
             <div className="flex items-start gap-4 mb-8 p-4 border border-[color:var(--rule-soft)] rounded-xl w-fit">
               <img
                 src="/g-cert.svg"
@@ -69,10 +69,10 @@ export default function Company() {
                 className="h-28 w-auto flex-none"
               />
               <div>
-                <p className={`${text.dtValue} font-semibold leading-snug`}>
+                <p className={text.body}>
                   JDLA Deep Learning for GENERAL 2026 #3
                 </p>
-                <p className={`${text.small} mt-2`}>
+                <p className={`${text.body} mt-2`}>
                   一般社団法人 日本ディープラーニング協会（JDLA）認定のAI資格。<br />
                   AIの基礎理論から倫理・法規制・ビジネス活用まで、<br />
                   体系的な知識を保有することを証明する。

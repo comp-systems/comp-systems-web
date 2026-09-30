@@ -36,7 +36,7 @@ export default function Values() {
                 <span className={text.num}>{i + 1}</span>
                 <h3 className={text.h3}>{v.title}</h3>
               </div>
-              <p className={`${text.bodyNarrow} whitespace-pre-line`}>{v.desc}</p>
+              <p className={`${text.body} whitespace-pre-line`}>{v.desc}</p>
             </div>
           ))}
         </div>

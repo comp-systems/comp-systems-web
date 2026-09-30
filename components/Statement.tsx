@@ -4,7 +4,7 @@ import { text } from "./typography";
 export default function Statement() {
   return (
     <section className="min-h-screen flex items-center justify-center text-center px-6 py-32">
-      <div className={`${text.lead} space-y-10`}>
+      <div className={`${text.body} space-y-10`}>
         <p>AIの台頭により、産業は加速度的に進化しています。</p>
         <p>
           常識を疑い、新たな技術を受け入れ続けることが、

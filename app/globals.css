@@ -11,7 +11,7 @@ html {
  */
 :root {
   --fg: #ffffff;
-  --fg-muted: rgba(255, 255, 255, 0.62);
+  --fg-muted: rgba(255, 255, 255, 0.82);
   --fg-subtle: rgba(255, 255, 255, 0.45);
   --fg-faint: rgba(255, 255, 255, 0.2);
   --rule: rgba(255, 255, 255, 0.2);
@@ -24,7 +24,7 @@ html {
 
 .on-light {
   --fg: #0a0a0a;
-  --fg-muted: rgba(10, 10, 10, 0.68);
+  --fg-muted: rgba(10, 10, 10, 0.85);
   --fg-subtle: rgba(10, 10, 10, 0.5);
   --fg-faint: rgba(10, 10, 10, 0.22);
   --rule: rgba(10, 10, 10, 0.14);

@@ -20,9 +20,9 @@ export default function Journal() {
               href={`/journal/${e.slug}`}
               className="group grid sm:grid-cols-[7rem_5rem_1fr] gap-1 sm:gap-8 items-baseline py-6 border-t border-[color:var(--rule)] hover:bg-[color:var(--surface-alt)] transition-colors"
             >
-              <span className={text.dtLabel}>{formatDate(e.date)}</span>
-              <span className={`${text.small} sm:justify-self-start`}>{e.tag}</span>
-              <span className={`${text.dtValue} group-hover:underline underline-offset-4`}>
+              <span className={text.body}>{formatDate(e.date)}</span>
+              <span className={`${text.body} sm:justify-self-start`}>{e.tag}</span>
+              <span className={`${text.body} group-hover:underline underline-offset-4`}>
                 {e.title}
               </span>
             </Link>

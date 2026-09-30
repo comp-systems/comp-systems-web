@@ -52,7 +52,7 @@ export default function Careers() {
             <br className="hidden sm:block" />
             共に創る仲間を募集しています！
           </h2>
-          <p className={`${text.lead} max-w-3xl`}>
+          <p className={`${text.body} max-w-3xl`}>
             創業期のベンチャー企業で、0から組織を作りながら、
             <br />
             営業力、AI活用力を身につけましょう！
@@ -69,7 +69,7 @@ export default function Careers() {
           <div className="space-y-10">
             {positions.map((p) => (
               <div key={p.role} className="p-10 border border-[color:var(--rule)] rounded-2xl">
-                <span className={`${text.eyebrow} inline-block mb-6 px-3 py-1 border border-[color:var(--rule)] rounded-full`}>
+                <span className={`${text.body} inline-block mb-6 px-3 py-1 border border-[color:var(--rule)] rounded-full`}>
                   {p.type}
                 </span>
                 <h3 className={`${text.h3} mb-4`}>
@@ -84,10 +84,10 @@ export default function Careers() {
                       key={d.label}
                       className="flex flex-col sm:flex-row gap-1 sm:gap-12 py-4 border-b border-[color:var(--rule-soft)]"
                     >
-                      <span className={`${text.dtLabel} flex-none w-40`}>
+                      <span className={`${text.body} flex-none w-40`}>
                         {d.label}
                       </span>
-                      <span className={`${text.dtValue} whitespace-pre-line`}>
+                      <span className={`${text.body} whitespace-pre-line`}>
                         {d.value}
                       </span>
                     </div>
@@ -105,12 +105,10 @@ export default function Careers() {
           <h2 className={`${text.h2} mb-6`}>
             まずは話を聞いてみませんか。
           </h2>
-          <p className={`${text.lead} mb-16`}>
+          <p className={`${text.body} mb-16`}>
             まずはカジュアル面談でご状況をお聞かせください！
             <br />
-            <span className="text-[0.85em]">
-              ※カジュアル面談での内容は選考には一切関係ございません。
-            </span>
+            ※カジュアル面談での内容は選考には一切関係ございません。
           </p>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfOdoEOG2LBmIA-sb5b42wP9rCRLFQx2o9DgDaR9f0qoQk4LA/viewform"
