@@ -13,7 +13,7 @@ export default function Service() {
   return (
     <section id="service" className="py-40 px-6 bg-[color:var(--surface-alt)]">
       <div className="max-w-5xl mx-auto">
-        <h2 className={`${text.h2} mb-6`}>支援の流れ</h2>
+        <h2 className={`${text.h2} mb-6`}>支援内容</h2>
         <p className={`${text.body} mb-12`}>企業様によって必要な内容をカスタマイズして提供いたします。</p>
 
         <div className="space-y-px">
