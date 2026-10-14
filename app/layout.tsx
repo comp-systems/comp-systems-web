@@ -57,7 +57,6 @@ const jsonLd = {
     postalCode: "530-0001",
     addressCountry: "JP",
   },
-  areaServed: "JP",
   serviceType: "AI活用支援・代行",
 };
 
