@@ -146,14 +146,21 @@ export default function ContactForm() {
 
   if (state === "sent") {
     return (
-      <div className="py-16">
+      <div className="pt-14">
         <p className={`${text.h3} mb-6`}>送信しました。ありがとうございます。</p>
         <p className={text.body}>担当より2営業日以内にご連絡いたします。</p>
       </div>
     );
   }
 
+  // 案内文はフォームと一緒に出し、送信後は消す（送信完了の画面に残ると不自然なため）
   return (
+    <>
+    <p className={`${text.body} mb-20`}>
+      AI活用余地の無料検証、その他お問い合わせは以下のフォームよりお願いいたします。
+      <br />
+      担当より2営業日以内にご連絡いたします。
+    </p>
     <form onSubmit={onSubmit} className="max-w-2xl">
       <Group>
         <div>
@@ -234,5 +241,6 @@ export default function ContactForm() {
         {state === "sending" ? "送信中…" : "この内容で送信する"}
       </button>
     </form>
+    </>
   );
 }
